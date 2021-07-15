@@ -1,0 +1,33 @@
+body{
+  align-items: center;
+}
+h1{
+  text-transform: uppercase ; font-size: 20px; color: rgb(0, 0, 0);
+}
+
+button {
+  width: 15%; height: 60px; border-radius: 50px;
+  background: linear-gradientlinear-(60deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  text-transform: uppercase ; font-size: 15px; color: rgb(0, 0, 0);
+  background-size: 400%; position: relative;
+}
+
+button::before {
+  content:""; position: absolute; left:-5px;
+  top: -5px; bottom: -5px; right: -5px;
+  background: linear-gradient(60deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  z-index: -1; border-radius: 40px;filter: blur(20px);
+  background-size: 400%;
+}
+button:hover::before {
+  animation: hello 8s infinite;
+}
+button:hover {
+  animation: hello 8s infinite;
+  cursor: pointer;
+}
+@keyframes hello {
+  100%{
+      background-position: -400% 0;
+  }
+}
